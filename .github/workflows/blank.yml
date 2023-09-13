@@ -44,7 +44,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "43762575+fms-1988@users.noreply.github.com"
+          git config --local user.email "fms.morelli@gmail.com"
           git config --local user.name "fms-1988"
           git add data/*.csv
           git commit -m "Add scraped data" || echo "No changes to commit"
