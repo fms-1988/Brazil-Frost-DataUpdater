@@ -23,6 +23,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y firefox
 
+      #This will print the path to the Firefox binary in the action's logs.
+      - name: Locate Firefox Binary
+        run: |
+          which firefox
+          
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
