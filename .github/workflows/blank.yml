@@ -35,8 +35,12 @@ jobs:
       - name: Check Firefox Binary
         run: |
           ls /usr/bin | grep firefox
+
+      - name: Install dependencies_1
+        run: |
+          sudo apt-get install -y libgtk-3-0 libdbus-glib-1-2 xvfb
           
-      - name: Install Dependencies
+      - name: Install Dependencies_2
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
