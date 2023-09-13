@@ -42,12 +42,14 @@ jobs:
         run: python scraper.py
 
       - name: Commit and push if changes
+
+      - name: Commit files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add data/*.csv   # This will add all CSV files in the 'data' directory
-          git commit -m "Add scraped data" -a || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/fms-1988/INMET_frost.git
-          git push
-        #env:
-        #  GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          git config --local user.name actions-user
+          git config --local user.email "actions@github.com"
+          git add data/*
+          git commit -am "GH ACTION Headlines $(date)"
+          git push origin main
+        env:
+          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+          username: github-actions
