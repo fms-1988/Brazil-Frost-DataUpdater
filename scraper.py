@@ -10,7 +10,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 #configurate download folder
-file_path = "/home/felipe/Documents/comp/inmet_actions/data"
+file_path = "data/"
 options = Options()
 options.set_preference("browser.download.folderList", 2)
 options.set_preference("browser.download.manager.showWhenStarting", False)
