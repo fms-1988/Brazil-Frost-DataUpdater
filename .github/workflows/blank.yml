@@ -48,3 +48,5 @@ jobs:
           git add data/*.csv   # This will add all CSV files in the 'data' directory
           git commit -m "Add scraped data" -a || echo "No changes to commit"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
