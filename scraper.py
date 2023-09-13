@@ -21,6 +21,7 @@ options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/x-
 #open webpage
 driver = webdriver.Firefox(options=options)
 driver.get('https://portal.inmet.gov.br/paginas/geadas#')
+time.sleep(3)
 
 #---------Define_functions------------
 
