@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.10.12
 
@@ -42,9 +42,9 @@ jobs:
         run: python scraper.py
 
 
-      - name: Push changes
+      - name: Commit and push changes
         run: |
-          git config --local user.email "43762575+fms-1988@users.noreply.github.com"  # Use your actual email here
+          git config --local user.email "43762575+fms-1988@users.noreply.github.com"
           git config --local user.name "fms-1988"
           git add data/*.csv
           git commit -m "Add scraped data" || echo "No changes to commit"
