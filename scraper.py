@@ -21,10 +21,8 @@ options.binary_location = '/usr/bin/firefox'#'/snap/bin/firefox'  # Explicitly s
 
 
 from selenium.webdriver.firefox.service import Service
-
-service = Service(GeckoDriverManager().install())
+service = Service()
 service.firefox_binary = '/usr/bin/firefox'
-
 driver = webdriver.Firefox(service=service, options=options)
 
 #open webpage
