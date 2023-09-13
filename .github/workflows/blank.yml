@@ -41,15 +41,15 @@ jobs:
       - name: Run scraper
         run: python scraper.py
 
-      - name: Commit and push if changes
+#      - name: Commit and push if changes
 
-      - name: Commit files
-        run: |
-          git config --local user.name actions-user
-          git config --local user.email "actions@github.com"
-          git add data/*
-          git commit -am "GH ACTION Headlines $(date)"
-          git push origin main
-        env:
-          REPO_KEY: ${{secrets.MY_GITHUB_TOKEN}}
-          username: github-actions #
+#      - name: Commit files
+#        run: |
+#          git config --local user.name actions-user
+#          git config --local user.email "actions@github.com"
+#          git add data/*
+#          git commit -am "GH ACTION Headlines $(date)"
+#          git push origin main
+#        env:
+#          REPO_KEY: ${{secrets.MY_GITHUB_TOKEN}}
+#          username: github-actions #
