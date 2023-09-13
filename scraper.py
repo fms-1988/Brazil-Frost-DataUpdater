@@ -19,15 +19,12 @@ options.set_preference("browser.download.dir", file_path)
 options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/x-gzip")
 #options.binary_location = '/usr/bin/firefox'#'/snap/bin/firefox'  # Explicitly specify Firefox binary path
 
-
-from selenium.webdriver.firefox.service import Service
-service = Service()
-service.firefox_binary = '/usr/bin/firefox'
-driver = webdriver.Firefox(service=service, options=options)
-
 #open webpage
-#driver = webdriver.Firefox(options=options)
-#driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
+#from selenium.webdriver.firefox.service import Service
+#service = Service()
+#service.firefox_binary = '/usr/bin/firefox'
+#driver = webdriver.Firefox(service=service, options=options)
+driver = webdriver.Firefox(options=options)
 driver.get('https://portal.inmet.gov.br/paginas/geadas#')
 time.sleep(3)
 
