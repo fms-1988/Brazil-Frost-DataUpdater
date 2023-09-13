@@ -8,7 +8,12 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-
+  
+    permissions:
+        # Give the default GITHUB_TOKEN write permission to commit and push the
+        # added or changed files to the repository.
+        contents: write
+        
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -42,14 +47,15 @@ jobs:
         run: python scraper.py
 
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "fms.morelli@gmail.com"
-          git config --local user.name "fms-1988"
-          git add data/*.csv
-          git commit -m "Add scraped data" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/fms-1988/INMET_frost.git
-          git push
+      #- name: Commit and push changes
+      #  run: |
+      #    git config --local user.email "fms.morelli@gmail.com"
+      #    git config --local user.name "fms-1988"
+      #    git add data/*.csv
+      #    git commit -m "Add scraped data" || echo "No changes to commit"
+      #    git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/fms-1988/INMET_frost.git
+      #    git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
 
 
 
