@@ -20,13 +20,17 @@ jobs:
 
       - name: Setup Firefox (non-snap version)
         run: |
-         sudo apt-get update
-         sudo apt-get install -y firefox
+          sudo apt-get update
+          sudo apt-get install -y firefox
 
       #This will print the path to the Firefox binary in the action's logs.
       - name: Locate Firefox Binary
         run: |
-         which firefox
+          which firefox
+      
+      - name: Test Firefox Launch
+        run: |
+          /usr/bin/firefox --headless --version
 
       - name: Check Firefox Binary
         run: |
