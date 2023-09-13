@@ -47,7 +47,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add data/*.csv   # This will add all CSV files in the 'data' directory
           git commit -m "Add scraped data" -a || echo "No changes to commit"
-          #git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/fms-1988/INMET_frost.git
+          git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/fms-1988/INMET_frost.git
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        #env:
+        #  GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
