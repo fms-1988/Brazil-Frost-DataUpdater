@@ -17,7 +17,7 @@ options.set_preference("browser.download.folderList", 2)
 options.set_preference("browser.download.manager.showWhenStarting", False)
 options.set_preference("browser.download.dir", file_path)
 options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/x-gzip")
-options.binary_location = '/usr/bin/firefox'#'/snap/bin/firefox'  # Explicitly specify Firefox binary path
+#options.binary_location = '/usr/bin/firefox'#'/snap/bin/firefox'  # Explicitly specify Firefox binary path
 
 
 from selenium.webdriver.firefox.service import Service
