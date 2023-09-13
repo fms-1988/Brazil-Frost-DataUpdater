@@ -17,11 +17,12 @@ options.set_preference("browser.download.folderList", 2)
 options.set_preference("browser.download.manager.showWhenStarting", False)
 options.set_preference("browser.download.dir", file_path)
 options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/x-gzip")
-options.binary_location = '/usr/bin/firefox'  # Explicitly specify Firefox binary path
+options.binary_location = '/snap/bin/firefox'  # Explicitly specify Firefox binary path
 
 
 #open webpage
-driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
+driver = webdriver.Firefox(options=options)
+#driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
 driver.get('https://portal.inmet.gov.br/paginas/geadas#')
 time.sleep(3)
 
