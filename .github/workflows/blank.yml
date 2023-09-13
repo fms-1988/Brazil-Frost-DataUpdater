@@ -18,13 +18,13 @@ jobs:
         with:
           python-version: 3.10.12
 
-      - name: Setup Firefox (non-snap version)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y firefox
+      #- name: Setup Firefox (non-snap version)
+      #  run: |
+      #    sudo apt-get update
+      #    sudo apt-get install -y firefox
 
-      - uses: browser-actions/setup-firefox@v1
-      - run: firefox --version
+      #- uses: browser-actions/setup-firefox@v1
+      #- run: firefox --version
 
       #This will print the path to the Firefox binary in the action's logs.
       - name: Locate Firefox Binary
