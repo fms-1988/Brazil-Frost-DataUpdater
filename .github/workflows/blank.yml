@@ -42,14 +42,14 @@ jobs:
         run: python scraper.py
 
 
-      - name: Commit and push if changes
+      - name: Push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add data/*.csv
-          git commit -m "Add scraped data" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/fms-1988/INMET_frost.git
-          git push
+        git config --local user.email "43762575+fms-1988@users.noreply.github.com"  # Use your actual email here
+        git config --local user.name "fms-1988"
+        git add data/*.csv
+        git commit -m "Add scraped data" || echo "No changes to commit"
+        git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/fms-1988/INMET_frost.git
+        git push
 
 
 
