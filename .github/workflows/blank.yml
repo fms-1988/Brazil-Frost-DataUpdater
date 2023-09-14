@@ -62,7 +62,7 @@ jobs:
       - name: Push Changes
         run: git push origin main
         env:
-          GITHUB_TOKEN: ${{secrets.SECRET_1}}
+          GITHUB_TOKEN: ${{secrets.SECRET_1}}#
         
       #- name: Commit and push changes
       #  run: |
