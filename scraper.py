@@ -10,13 +10,14 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 #configurate download folder
-file_path = "data/"
+#file_path = "data/"
+file_path = os.path.abspath("data/")
 options = Options()
 options.add_argument('-headless') # Add this if you don't want the browser GUI to appear in CI environment
 options.set_preference("browser.download.folderList", 2)
 options.set_preference("browser.download.manager.showWhenStarting", False)
 options.set_preference("browser.download.dir", file_path)
-options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/x-gzip")
+options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
 #options.binary_location = '/usr/bin/firefox'#'/snap/bin/firefox'  # Explicitly specify Firefox binary path
 
 #open webpage
