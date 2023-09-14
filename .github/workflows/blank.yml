@@ -1,4 +1,4 @@
-name: Webpage Scraper
+Ename: Webpage Scraper
 #
 on:
   push:
@@ -62,7 +62,7 @@ jobs:
       - name: Push Changes
         run: git push origin main
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.SECRET_1}}
         
       #- name: Commit and push changes
       #  run: |
