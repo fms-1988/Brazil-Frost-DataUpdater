@@ -64,7 +64,7 @@ jobs:
       - name: Commit Changes
         run: |
           git add data/*
-          git commit -m "xxx"
+          git commit -m "GH Action Autorun $(date)""
 
       - name: Push Changes
         run: git push origin main
