@@ -59,10 +59,10 @@ jobs:
           git add data/*
           git commit -m "xxx"
 
-      - name: Push Changes
-        run: git push origin main
-        env:
-          GITHUB_TOKEN: ${{secrets.SECRET_1}}#
+      #- name: Push Changes
+      #  run: git push origin main
+      #  env:
+      #    GITHUB_TOKEN: ${{secrets.SECRET_1}}#
         
       #- name: Commit and push changes
       #  run: |
