@@ -52,13 +52,15 @@ jobs:
         run: |
           ls -al data/
 ##43762575+fms-1988@users.noreply.github.com
-      - name: Commit files
+      - name: Configure Git & Commit Changes
         run: |
           git config --local user.name actions-user
           git config --local user.email "actions@github.com"
           git add data/*
-          git commit -am "GH ACTION Headlines $(date)"
-          git push origin main
+          git commit -m "xxx"
+
+      - name: Push Changes
+        run: git push origin main
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         
