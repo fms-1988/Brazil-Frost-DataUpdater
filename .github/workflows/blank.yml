@@ -52,10 +52,13 @@ jobs:
         run: |
           ls -al data/
 ##43762575+fms-1988@users.noreply.github.com
-      - name: Configure Git & Commit Changes
+      - name: Configure Git
         run: |
-          git config --local user.name actions-user
-          git config --local user.email "actions@github.com"
+          git config --local user.name "fms-1988"
+          git config --local user.email "43762575+fms-1988@users.noreply.github.com"
+
+      - name: Commit Changes
+        run: |
           git add data/*
           git commit -m "xxx"
 
