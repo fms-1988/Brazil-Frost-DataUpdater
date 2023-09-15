@@ -111,6 +111,7 @@ except Exception as e:
     None
 
 #save data
+data = data.drop_duplicates()
 data.to_csv(os.path.join(file_path, "data.csv"), index=False)
 
 #update the file: last_update.csv
