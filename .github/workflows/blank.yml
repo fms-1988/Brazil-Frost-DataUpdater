@@ -2,8 +2,7 @@ name: Webpage Scraper
 #
 on:
   schedule:
-    # Run at 00:00 on the 28th of every month
-    - cron: '5 * * * *'
+    - cron: '*/5 * * * *'
     
   push:
     branches:
