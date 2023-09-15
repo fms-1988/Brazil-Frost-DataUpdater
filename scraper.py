@@ -7,6 +7,7 @@ import os
 import glob
 import time
 from datetime import datetime
+from datetime import date
 from dateutil.relativedelta import relativedelta
 
 #configurate download folder
