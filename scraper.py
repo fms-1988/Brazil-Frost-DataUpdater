@@ -27,7 +27,7 @@ options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/oc
 #driver = webdriver.Firefox(service=service, options=options)
 driver = webdriver.Firefox(options=options)
 driver.get('https://portal.inmet.gov.br/paginas/geadas#')
-time.sleep(3)
+time.sleep(10)
 
 #---------Define_functions------------
 
@@ -42,19 +42,20 @@ def kind_of_observation(i):
     #element2 = driver.find_element(By.XPATH, '/html/body/div[3]/div[1]/div/div/div/div[1]/div[1]') #convencional
     element2 = driver.find_element(By.XPATH, '/html/body/div[3]/div[1]/div/div/div/div[1]/div['+str(i)+']') #automática
     element2.click()
-    time.sleep(1.5)
+    time.sleep(5)
 
 
 def search():
     element3 = driver.find_element(By.ID, 'pesquisar')
     element3.click()
+    time.sleep(5)
 
 from selenium.common.exceptions import NoSuchElementException, ElementNotVisibleException
 def download_():
     try:
         element4 = driver.find_element(By.CLASS_NAME, 'download')
         element4.click()
-        time.sleep(3)
+        time.sleep(5)
     except (NoSuchElementException, ElementNotVisibleException):
         # If the element isn't found or isn't visible, print an error message
         #print(f"No data available to this month")
@@ -90,6 +91,7 @@ new_date_str = new_date.strftime('%d/%m/%Y')
 incert_data(new_date_str)
 
 # chose between '1 = convencional' and '2 = automática'
+time.sleep(5)
 kind_of_observation(1)
 
 #click on 'pesquisar'
