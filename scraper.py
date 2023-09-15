@@ -80,11 +80,11 @@ if os.path.exists(new_data_path):
 data = pd.read_csv(os.path.join(file_path, "data.csv"))
 
 #When was the dast update?
-last_date_str = pd.read_csv(os.path.join(file_path, "last_update.csv")).columns[0]
-last_date = datetime.strptime(last_date_str, '%d/%m/%Y').date()
+#last_date_str = pd.read_csv(os.path.join(file_path, "last_update.csv")).columns[0]
+#last_date = datetime.strptime(last_date_str, '%d/%m/%Y').date()
 
-# Add one month to the last date
-new_date = last_date + relativedelta(months=1)
+#new_date
+new_date = date.today()
 new_date_str = new_date.strftime('%d/%m/%Y')
 
 # incert date on the website
