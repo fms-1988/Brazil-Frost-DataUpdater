@@ -10,3 +10,6 @@ The National Institute of Meteorology (INMET) releases daily information about t
 
 Our goal is to keep this frost database continuously updated. This way, the data is available for various purposes, such as map creation.
 
+
+![Alt text](https://raw.githubusercontent.com/fms-1988/Brazil-Frost-DataUpdater/main/data/maps/RS.png)
+
