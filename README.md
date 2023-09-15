@@ -4,7 +4,7 @@ The National Institute of Meteorology (INMET) releases daily information about t
 
 1. **Data Collection**: Collect data from the specified site ([linked here](https://portal.inmet.gov.br/paginas/geadas#)).
 2. **Data Organization**: Organize the collected data in an appropriate database format and store it in 'data/data.csv'.
-3. **Automation with GitHub Action**: Create a GitHub Action that automatically updates this database every 30 days. This action runs the 'scraper.py' file to perform the update.
+3. **Automation with GitHub Action**: Create a GitHub Action that automatically updates this database every 15 days. This action runs the 'scraper.py' file to perform the update.
 
 ## Objective
 
