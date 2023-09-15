@@ -117,4 +117,4 @@ data.to_csv(os.path.join(file_path, "data.csv"), index=False)
 #update the file: last_update.csv
 last_date_dir = os.path.join(file_path, "last_update.csv")
 with open(last_date_dir, 'w') as file:
-    file.write(new_date_str)
+    file.write(str(datetime.now()))
