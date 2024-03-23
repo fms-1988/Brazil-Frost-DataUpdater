@@ -43,7 +43,7 @@ def kind_of_observation(i):
     #element2 = driver.find_element(By.XPATH, '/html/body/div[3]/div[1]/div/div/div/div[1]/div[1]') #convencional
     element2 = driver.find_element(By.XPATH, '/html/body/div[3]/div[1]/div/div/div/div[1]/div['+str(i)+']') #automática
     #element2.click()
-    driver.execute_script("arguments[0].click();", element2)
+    driver.execute_script("arguments[0].click();", element2)#
     time.sleep(5)
 
 
