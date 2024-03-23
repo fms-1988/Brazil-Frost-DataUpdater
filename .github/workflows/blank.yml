@@ -1,5 +1,4 @@
 name: Webpage Scraper
-
 #
 on:
   schedule:
@@ -22,6 +21,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          node-version: '20'
         #with:
         #  persist-credentials: true # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         #  fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
@@ -29,7 +30,6 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          node-version: '20'
           python-version: 3.10.12
 
       #it is not necessary install firefox on ubuntu
