@@ -1,4 +1,5 @@
 name: Webpage Scraper
+
 #
 on:
   schedule:
@@ -28,6 +29,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
+          node-version: '20'
           python-version: 3.10.12
 
       #it is not necessary install firefox on ubuntu
